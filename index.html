@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kathleen Antonio - Portfolio</title>
     <style>
-         body {
+        body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
@@ -20,7 +20,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-       
         }
 
         .brand {
@@ -51,7 +50,7 @@
         .nav-bar li a:hover {
             color: #007bff; 
         }
-        
+
         .container {
             margin: 80px auto 20px;
             padding: 20px;
@@ -133,7 +132,7 @@
             display: block;
             color: black;
         }
-     
+
         .outro {
             clear: both; 
             margin-top: 20px;
@@ -148,6 +147,27 @@
             font-size: 16px;
             line-height: 1.5;
             text-align: justify; 
+        }
+
+        .mission-vision {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .mission, .vision {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .mission h2, .vision h2 {
+            font-size: 24px;
+            color: #1176e2;
+        }
+
+        .mission p, .vision p {
+            font-size: 18px;
+            line-height: 1.5;
         }
 
         @media screen and (max-width: 768px) {
@@ -176,6 +196,14 @@
 
             .intro p {
                 margin-left: 0;
+            }
+
+            .mission-vision {
+                flex-direction: column;
+            }
+
+            .mission, .vision {
+                margin: 20px 0;
             }
         }
     </style>
@@ -218,8 +246,8 @@
             <p class="fade-in">Picture: <a href="preact2.png"><img src="preact2.png" alt="Prelim Assignment" class="portfolio-pic"></a></p>
             <p class="fade-in">Exam</p>
             <p class="fade-in">Picture: <a href="midexam.jpg"><img src="midexam.jpg" alt="Prelim Exam" class="portfolio-pic"></a></p>
-            </div>
-            <div class="container fade-in" id="midterm">
+        </div>
+        <div class="container fade-in" id="midterm">
             <h3>Midterm</h3>
             <p class="fade-in">Activities</p>
             <p class="fade-in">Picture: <a href="midtermact.png"><img src="midtermact.png" alt="Midterm Activities" class="portfolio-pic"></a></p>
@@ -229,8 +257,8 @@
             <p class="fade-in">Picture: <a href="midtermass2.png"><img src="midtermass2.png" alt="Midterm Assignment" class="portfolio-pic"></a></p>
             <p class="fade-in">Exam</p>
             <p class="fade-in">Picture: <a href="midexam.jpg"><img src="midexam.jpg" alt="Midterm Exam" class="portfolio-pic"></a></p>
-            </div>
-            <div class="container fade-in" id="finals">
+        </div>
+        <div class="container fade-in" id="finals">
             <h3>Finals</h3>
             <p class="fade-in">Activities</p>
             <p class="fade-in">Picture: <a href="finalact2.png"><img src="finalact2.png" alt="Finals Activities" class="portfolio-pic"></a></p>
@@ -238,61 +266,75 @@
             <p class="fade-in">Picture: <a href="finalact3.png"><img src="finalact3.png" alt="Finals Assignment" class="portfolio-pic"></a></p>
             <p class="fade-in">Assignment</p>
             <p class="fade-in">Picture: <a href="finalass.png"><img src="finalass.png" alt="Finals Assignment" class="portfolio-pic"></a></p>
+        </div>
+    </div>
+
+    <div class="container fade-in" id="mission-vision">
+        <div class="mission-vision">
+            <div class="mission">
+                <h2>MISSION</h2>
+                <p>As an institution of higher learning, PnC is committed to equip individuals with knowledge, skills, and values that will enable them to achieve their professional goals and provide leadership and service for national development.</p>
             </div>
+            <div class="vision">
+                <h2>VISION</h2>
+                <p>A premier institution of higher learning in Region IV, developing globally-competitive and value-laden professionals and leaders instrumental to community development and nation-building.</p>
             </div>
-            <div class="container fade-in" id="about">
-                <div class="outro fade-in">
-                    <img src="kath.jpg" alt="Profile Picture" class="profile-pic fade-in">
-                    <div class="intro">
-                        <h2 style="font-size: 32px;" class="fade-in">About Me</h2>
-                        <p class="fade-in">I'm Kathleen Antonio, a dedicated Computer Science student with a passion for technology and innovation. Proficient in Word, Excel, presentations, and modeling, I strive to excel in both academic and practical pursuits. Outside of academia, I enjoy indulging in my hobbies of watching movies, dancing, and finding solace in a good night's sleep.</p>
-                    </div>
-                </div>
+        </div>
+    </div>
+
+    <div class="container fade-in" id="about">
+        <div class="outro fade-in">
+            <img src="kath.jpg" alt="Profile Picture" class="profile-pic fade-in">
+            <div class="intro">
+                <h2 style="font-size: 32px;" class="fade-in">About Me</h2>
+                <p class="fade-in">I'm Kathleen Antonio, a dedicated Computer Science student with a passion for technology and innovation. Proficient in Word, Excel, presentations, and modeling, I strive to excel in both academic and practical pursuits. Outside of academia, I enjoy indulging in my hobbies of watching movies, dancing, and finding solace in a good night's sleep.</p>
             </div>
-            
-            <div class="container fade-in" id="contact">
-                <h2 class="fade-in">Contact Me</h2>
-                <br>
-                <p class="fade-in">Gmail: <a href="mailto:kathriparip29@gmail.com" class="fade-in">kathriparip29@gmail.com</a></p>
-                <p class="fade-in">Facebook: <a href="https://www.facebook.com/profile.php?id=100010918722697&mibextid=ZbWKwL" class="fade-in">Kathleen Antonio</a></p>
-                <p class="fade-in">Mobile Number: 09924420398</p>
-            </div>
-            
-            <script>
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        document.querySelector(this.getAttribute('href')).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    });
+        </div>
+    </div>
+    
+    <div class="container fade-in" id="contact">
+        <h2 class="fade-in">Contact Me</h2>
+        <br>
+        <p class="fade-in">Gmail: <a href="mailto:kathriparip29@gmail.com" class="fade-in">kathriparip29@gmail.com</a></p>
+        <p class="fade-in">Facebook: <a href="https://www.facebook.com/profile.php?id=100010918722697&mibextid=ZbWKwL" class="fade-in">Kathleen Antonio</a></p>
+        <p class="fade-in">Mobile Number: 09924420398</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
-            
-                document.querySelectorAll('.portfolio-pic').forEach(pic => {
-                    pic.addEventListener('click', function() {
-                        this.classList.toggle('enlarge');
-                    });
+            });
+        });
+
+        document.querySelectorAll('.portfolio-pic').forEach(pic => {
+            pic.addEventListener('click', function() {
+                this.classList.toggle('enlarge');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.fade-in');
+            const options = {
+                threshold: 0.5
+            };
+            const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.remove('active');
+                    }
                 });
-            
-                document.addEventListener('DOMContentLoaded', function() {
-                    const sections = document.querySelectorAll('.fade-in');
-                    const options = {
-                        threshold: 0.5
-                    };
-                    const observer = new IntersectionObserver(function(entries, observer) {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('active');
-                            } else {
-                                entry.target.classList.remove('active');
-                            }
-                        });
-                    }, options);
-            
-                    sections.forEach(section => {
-                        observer.observe(section);
-                    });
-                });
-            </script>
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
-</html>            
+</html>
